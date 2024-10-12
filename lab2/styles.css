@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Pacifico&display=swap');
+
+.profile {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.profile-photo {
+    width: 200px; 
+    height: auto;
+    border: 2px solid #969292; 
+}
+
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: "Comfortaa", sans-serif;
+}
+
+body {
+    background-color: #f9f9f9; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    background-color: rgb(81, 13, 87);
+    color: white;
+    width: 200%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header-title {
+    transition: color 0.3s ease-in-out;
+    font-size: 2.5em; 
+}
+
+.header-title:hover {
+    color: #ff00ee; 
+}
+
+.hobbies-grid {
+    display: flex;            
+    flex-direction: row;      
+    gap: 20px;                
+    justify-content: center;  
+    flex-wrap: wrap;          
+    margin: 20px 0; 
+}
+
+.hobby-item {
+    background-color: #ffffff; 
+    padding: 15px;
+    text-align: center;
+    border: 2px solid #9b9d9f; 
+    border-radius: 15px; 
+    width: 200px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+.hobby-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.hobby-image {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 15px; 
+}
+
+.hobby-image:hover {
+    transform: scale(1.05); 
+}
+
+.facts-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+}
+
+.facts-table th, .facts-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.facts-table th {
+    background-color: rgb(81, 13, 87); 
+    color: white;
+}
+
+.facts-table tr:nth-child(even) {
+    background-color: #f1f1f1; 
+}
+
+.facts-table tr:hover {
+    background-color: #e0e0e0; 
+}
+
+.footer {
+    background-color: rgb(81, 13, 87); 
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center; 
+    border-radius: 15px; 
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.footer-button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    width: 150px; 
+    text-align: center; 
+}
+
+.footer-button:hover {
+    background-color: #e6b800; 
+    transform: scale(1.05); 
+}
+
+@media (max-width: 768px) {
+    .hobbies-grid {
+        flex-direction: column; 
+        align-items: center;    
+    }
+}
