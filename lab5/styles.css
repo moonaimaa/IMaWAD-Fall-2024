@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.xylophone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8B4513; /* цвет коробки или гитары */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    width: 90vw;
+    max-width: 500px;
+    height: 300px;
+    position: relative;
+}
+
+.xylophone {
+    display: flex;
+    gap: 5px;
+}
+
+.xylo-button {
+    width: 50px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out, background-color 0.1s;
+    border-radius: 5px;
+}
+
+.xylo-button[data-sound="C"] { background-color: #FFB3BA; }
+.xylo-button[data-sound="D"] { background-color: #FFDFBA; }
+.xylo-button[data-sound="E"] { background-color: #FFFFBA; }
+.xylo-button[data-sound="F"] { background-color: #BAFFC9; }
+.xylo-button[data-sound="G"] { background-color: #BAE1FF; }
+.xylo-button[data-sound="A"] { background-color: #E2BAFF; }
+.xylo-button[data-sound="B"] { background-color: #BAA9FF; }
+
+.xylo-button:hover {
+    transform: scale(1.05);
+}
+
+.xylo-button.active {
+    background-color: #666;
+}
+
+/* Дополнительный стиль для придания формы гитаре */
+.xylophone-container::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 15px;
+    background-color: #8B4513;
+    border-radius: 50% 50% 0 0;
+}
+
+.xylophone-container::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 15px;
+    background-color: #8B4513;
+    border-radius: 0 0 50% 50%;
+}
