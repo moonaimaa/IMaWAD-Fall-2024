@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(https://i.pinimg.com/736x/0e/c5/e5/0ec5e56593b3541b9a825e88dfa26575.jpg) no-repeat center center/cover;
+    font-family: 'Arial', sans-serif;
+    color: #f0f0f0;
+}
+
+.music-player {
+    width: 340px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Album Cover with Overlay Effect */
+.cover-container {
+    position: relative;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.cover-container:hover {
+    transform: scale(1.05);
+}
+
+.cover-image {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.3));
+    mix-blend-mode: overlay;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cover-container:hover .overlay {
+    opacity: 1;
+}
+
+.track-info {
+    margin: 15px 0;
+}
+
+.track-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.artist-name {
+    font-size: 0.9em;
+    color: #c5c5c5;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Progress Bar Container */
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.time {
+    font-size: 0.85em;
+    color: #ddd;
+}
+
+.progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.progress-bar:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.control-button {
+    font-size: 1.6em;
+    padding: 12px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.control-button:hover {
+    background: #1db954;
+    transform: scale(1.1);
+}
+
+.play-button {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
